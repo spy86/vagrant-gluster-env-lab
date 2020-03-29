@@ -5,7 +5,7 @@
 Vagrant.configure(2) do |config|
 
   config.vm.define "gluster-n01" do |ctl|
-    ctl.vm.box = "ubuntu/trusty64"
+    ctl.vm.box = "mmichal/ubuntu18_04"
     ctl.vm.hostname = "gluster-n01"
     ctl.vm.network "private_network", ip: "192.168.57.2"
     ctl.vm.provider "virtualbox" do |vb|
@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "gluster-n02" do |ctl|
-    ctl.vm.box = "ubuntu/trusty64"
+    ctl.vm.box = "mmichal/ubuntu18_04"
     ctl.vm.hostname = "gluster-n02"
     ctl.vm.network "private_network", ip: "192.168.57.3"
     ctl.vm.provider "virtualbox" do |vb|
